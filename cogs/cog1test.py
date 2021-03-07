@@ -1,7 +1,7 @@
 import discord
 from discord.ext import commands
 
-class CogsTest(commands.Cog):
+class Cogs(commands.Cog):
 
     def __init(self, client):
         self.client = client
@@ -11,4 +11,4 @@ class CogsTest(commands.Cog):
         await ctx.send("it works yay")
 
 def setup(client):
-    client.add_cog(CogsTest(client))
+    client.add_cog(Cogs(client))

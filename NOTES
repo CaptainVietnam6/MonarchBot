@@ -1,0 +1,37 @@
+THIS IS NOTES FOR THE CODE AND INSTRUCTIONS IN MAIN.PY
+
+this file is primarily made for people who aren't me to look at my code and understand it. especially if you want to copy this then you'll probably want to know how it works so you can de-bug and fix any potential issues.
+
+first off, WHAT THE NOTES MEAN!!!
+
+if i have a message like
+    '''START OF MUSIC AND VOICE CHANNEL RELATED COMMANDS'''
+this means the start of a MAJOR section and any commands you add that fits into the catergory goes there. that message specifically marks the beginning of a major section, the same message but with "END OF...." marks the end of a section.
+
+if i have a message like
+    #VOICE CHANNEL JOIN COMMAND
+this means that this is the start of a full command, in this case, the command for MonarchBot to join a voice channel. KEEP IN MIND THESE ARE ALL UPPERCASE!
+
+if i have a message like
+    #code above to specify options in ydl
+this means that this is a minor note in my code to help me or you, to understand or remember what it does. This is to prevent me or you in the future going "hmmm what does this do again?" KEEP IN MIND THESE ARE ALL LOWERCASE!
+
+REQUIRED PACKAGES: discord.py, discord, flask, youtube-dl, PyNaCl
+
+INDEX:
+
+IMPORTS: lines 1-20
+
+IMPORTANT STUFF: lines 26-90, 1250-1255
+
+MODERATION COMMANDS: lines 92-198
+
+TEST-BED COMMANDS: lines 200-218
+
+MUSIC AND VOICE CHANNEL RELATED COMMANDS: lines 220-427
+
+VOICE CHANNELS SOUNDBOARD COMMANDS: lines 429-720
+
+GAME RELATED COMMANDS: lines 722-861
+
+RESPONSES OR RELATED COMMANDS: lines 863-1247
