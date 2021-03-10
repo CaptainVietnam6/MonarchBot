@@ -159,7 +159,7 @@ async def _help_fun(ctx):
     author_name = ctx.author.display_name
     embed = discord.Embed(
         title = "**Fun/responses related commands list**",
-        description = "**These are commands that relate to fun or responses features of MonarchBot**\n\n",
+        description = "**These are commands that relate to fun or responses features of MonarchBot**\n\n8ball command: **/8ball {question}**\nDice command: **/dice**\nFranklin roast meme: **/loc**\nMeme command: **/meme**\nHow-to-use-google: **/google**\nServer daddy: **/daddy**\nServer mommy: **/mommy**\nBenice to staff: **/benice**\nSend thigh pics: **/thighpics**\nZeroTwo GIF: **/zerotwo**\nDictionary: **/dictionary {word}**\nRepeat after user: **/repeat**\nWhat-a-legend: **/legend**\nCapt Twitch link: **/twitch**\nEw lightmode: **/lightmode**\nReply spam: **/spam {word}**\nPrint fancy text: **/print {word}**\nSpeedrun profile: **/speedrun {user name}**\nShut up GIF: **/shut**\nDweam: **/dweam**\nSends nothing: **/nothing**\nDiscordmod meme: **/discordmod**\nCusswords: **/cusswords**\nFunny Pinged: **/pinged**\nFair: **fair**\nPog: **pog**",
         color = 0x00ff44
     )
     embed.set_footer(text = f"Requested by {author_name}")
@@ -1072,6 +1072,36 @@ async def _speedrunprofile(ctx, user_speedrun_input):
     await ctx.send(f"https://speedrun.com/user/{user_speedrun_input}")
 
 
+#DWEAM COMMAND LOL
+@client.command(aliases = ["dweam", "Dweam"])
+async def _dweamlolcommand(ctx):
+    await ctx.send("In this video, me and my friends coded it so that we're all anime cat girls, this was INSANE! To make it harder, we decided to give ourselves nicknames, so in the video we will be calling ourselves Dweam, Gogy and Sapcat. Can we beat Minecraft? You're about to find out. Also only a small percentage of people that watch my videos are actually subscribed so if you end up liking this video consider subscribing, it's free and you can always change your mind in the future, we are getting so close to 69420 million subscribers. Enjoy the video!")
+
+
+#SEND NOTHING COMMAND
+@client.command(aliases = ["nothing"])
+async def _sendnothinglol(ctx):
+    await ctx.send("⠀⠀⠀⠀⠀")
+
+
+#DISCORDMOD FUNNY
+@client.command(aliases = ["discordmod", "Discordmod"])
+async def _funnydiscordmod(ctx):
+    await ctx.send("https://i.kym-cdn.com/entries/icons/original/000/035/767/cover4.jpg")
+
+
+#CUSSWORDS FUNNY
+@client.command(aliases = ["cusswords", "cussword", "Cusswords", "Cussword"])
+async def _funnycusswords(ctx):
+    await ctx.send("no more saying cuss words! it. is. not. good. i'm putting a video on youtube about no more saying cuss words. no more saying cuss words, guys! it's inappropriate, and violent! if you say a cuss word then you're like.... going to jail and you're.. like... when you go to jail.. if u- when you go to jail if you say.. if you say a cuss word you go to jail and when you go to jail, you said a cuss word.. then you're only gonna eat broccoli and other vegetables for your whole life. you don't wanna eat vegetables sometimes people like eating sweets but... i eat broccoli.. so, i'm okay with broccoli but i do not wanna go to jail.")
+
+
+#FUNNY PINGED
+@client.command(aliases = ["pinged", "Pinged"])
+async def _funnygotpinged(ctx):
+    await ctx.send("I GOT PINGED FUCK SHIT SHIT SHIT MY PC IS GONNA EXPLODE IM GONNA DIE IM GONNA BE HOMLESS NOW WHY DID YOU DO THIS TO ME MY PC MADE A SMALL DING NOISE AHHHHHHHHHHHHHHHHHHHHHHHHHH WHY WHY WHY WHY IM SO SAD YOU BESTOWED THIS ANCIENT FORM OF TORTURE UPON ME YOU SHOULD BE UNMODDED AND BANNED IMMDIATELY WHYYYYYYYYYYYYYYYY")
+
+
 #SHUT UP COMMAND
 @client.command(aliases = ["shut", "Shut"])
 async def _shutupcommand(ctx):
@@ -1243,6 +1273,7 @@ async def _replygoodnight(message):
 '''
 
 
+'''
 #DETECTS CODE
 @client.listen("on_message")
 async def _detects_code(message):
@@ -1280,6 +1311,7 @@ async def _detects_code2(message):
         await message.channel.send("wow HTML code")
     if "```css" in message.content:
         await message.channel.send("wow CSS code")
+'''
 
 
 '''END OF RESPONSES OR RELATED COMMANDS'''
