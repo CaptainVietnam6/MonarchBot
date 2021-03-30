@@ -41,12 +41,13 @@ client.remove_command("help")
 
 
 #AUTO ROLE, GIVES TEMP MEMBER TO NEW MEMBERS
-ROLE = "736005696113344552"
+#AUTOROLE AND MEMBER JOIN WELCOME
 @client.event
 async def on_member_join(member):
-    rank = discord.utils.get(member.guild.roles, name = ROLE)
-    await member.add_roles(rank)
-    print(f"{member} was given the {rank} role.")
+    role = discord.utils.get(member.guild.roles, name = "Playground Member")
+    await asyncio.sleep(1)
+    await member.add_roles(role)
+    print("AutoRole: added a role to member")
 
 
 #LOAD cog
