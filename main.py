@@ -1027,12 +1027,18 @@ async def _dictionarylink(ctx, user_dictionary_request):
     await asyncio.sleep(float(0.5))
     await ctx.send(f"Here you go!\nhttps://www.dictionary.com/browse/{user_dictionary_request}?s=t")
 
-#f280c5
+
 #REPEAT COMMAND; BOT REPEATS AFTER USER
 @client.command(aliases = ["repeat", "Repeat", "say", "Say"])
 @cooldown(5, 60, BucketType.default)
 async def _repeat_after_user(ctx, *, user_repeat_input):
-    await ctx.send(f"{user_repeat_input}")
+    if "@everyone" in user_repeat_input:
+        await ctx.send("Cannot repeat mass ping")
+    else:
+        if "@here" in user_repeat_input:
+            await ctx.send("Cannot repeat mass ping")
+        else:
+            await ctx.send(f"{user_repeat_input}")
 
 
 #LEGEND REPLY COMMAND THINGY
@@ -1060,12 +1066,18 @@ async def _ewlightmode(ctx):
 @cooldown(1, 60, BucketType.default)
 async def _replyspam(ctx, *, user_spam_input):
     print("Someone activated the reply spam command")
-    await asyncio.sleep(float(0.5))
-    for i in range(5):
-        await ctx.send(f"{user_spam_input}")
-    await asyncio.sleep(float(0.25))
-    print("Reply spam command ended")
-    await ctx.send("Please wait 60 seconds to use this command again.")
+    if "@everyone" in user_spam_input:
+        await ctx.send("Cannot spam mass ping")
+    else:
+        if "@here" in user_spam_input:
+            await ctx.send("Cannot spam mass ping")
+        else:
+            for i in range(5):
+                await ctx.send(f"{user_spam_input}")
+                await asyncio.sleep(float(0.1))
+            await asyncio.sleep(float(0.25))
+            print("Reply spam command ended")
+            await ctx.send("Please wait 60 seconds to use this command again.")
 
 
 #PRINT COMMAND; SENDS A FANCY EMBED IMAGE WITH AUTHOR'S MESSAGE
